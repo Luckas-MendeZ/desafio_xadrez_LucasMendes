@@ -9,8 +9,12 @@ int main(){
         int rainhalugar=0; //casa atual da rainha
     //movimentação bispo
         int casasbispo=5; //quantidade de casas que precisa mover
-        int casasvert=1; //movimento vertical
-        int casashor=2; //movimento horizontal
+        int bispovert=1; //movimento vertical
+        int bispohor=2; //movimento horizontal
+    //movimentação cavalo
+        int cavalovert=1;
+        int cavalohor=1;
+        int j=1;
 
     printf("\n***Torre***\n");
 
@@ -32,7 +36,7 @@ int main(){
 
     for (int i = 0; i < casasbispo; i++){
 
-        switch (casasvert) {
+        switch (bispovert) {
         case 1:
             printf("Cima, ");
             break;
@@ -41,7 +45,7 @@ int main(){
             printf("invalido");
             break;
         } 
-        switch (casashor) {
+        switch (bispohor) {
         case 2:
             printf("Direita\n");
             break;
@@ -51,5 +55,18 @@ int main(){
             break;
         }
     }
+
+    printf("\n***Cavalo***\n");
+
+    for (int i = 0; i <= cavalovert; i++)
+    {   
+        while (j <= cavalohor)
+        {
+            printf("esquerda\n");
+            j++;
+        }
+        printf("baixo\n");
+    }
+    
     return 0;
 }
