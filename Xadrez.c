@@ -1,5 +1,33 @@
 #include <stdio.h>
 
+void movtorre(int casastorre){
+    if (casastorre > 0){
+    
+        printf("Direita! %d\n", casastorre);
+        movtorre(casastorre - 1);
+    }
+}
+
+void movrainha(int casasrainha){
+    if (casasrainha > 0){
+    
+        printf("Esquerda! %d\n", casasrainha);
+        movrainha(casasrainha - 1);
+    }
+}
+void movbispo(){
+    int casasbispo = 5;
+        printf("Cima, direita \n");
+    
+    for(int i = 0;i < casasbispo;i++){
+        for(int j = 0;j < 1;j++){
+            printf("Cima, direita!\n");
+            }
+    }
+}
+
+
+
 int main(){
     //movimentação torre
         int casastorre=5; //quantidade de casas que precisa mover
@@ -16,57 +44,55 @@ int main(){
         int cavalohor=1;
         int j=1;
 
-    printf("\n***Torre***\n");
+        char opcao;
 
-    while (torrelugar < casastorre)
-    {
-        printf("Direita\n");
-        torrelugar++;
-    }
-
-    printf("\n***Rainha***\n");
-
-    do
-    {
-        printf("Esquerda\n");
-        rainhalugar++;
-    } while (rainhalugar < casasrainha);
-
-    printf("\n***Bispo***\n");
-
-    for (int i = 0; i < casasbispo; i++){
-
-        switch (bispovert) {
-        case 1:
-            printf("Cima, ");
-            break;
-        
-        default:
-            printf("invalido");
-            break;
-        } 
-        switch (bispohor) {
-        case 2:
-            printf("Direita\n");
-            break;
-        
-        default:
-            printf("invalido");
-            break;
-        }
-    }
-
-    printf("\n***Cavalo***\n");
-
-    for (int i = 0; i <= cavalovert; i++)
-    {   
-        while (j <= cavalohor)
-        {
-            printf("esquerda\n");
-            j++;
-        }
-        printf("baixo\n");
-    }
+    printf("Selecione o movimentos das peças : T-Torre, R-Rainha,C-Cavalo,B-Bispo \n");
+    scanf(" %c",&opcao);
     
+    switch (opcao)
+    {
+    case 't':
+    case 'T':
+        printf("\n***Torre***\n");
+
+        movtorre(casastorre);
+        break;
+
+    case 'r':
+    case 'R':
+        printf("\n***Rainha***\n");
+
+        movrainha(casasrainha);
+        break;
+    
+    case 'b':
+    case 'B':
+        printf("\n***Bispo***\n");
+
+        movbispo();
+        break;
+    
+    case 'c':
+    case 'C':
+        printf("\n***Cavalo***\n");
+
+        for (int i = 0;i<4;i++){
+
+            if (i==2) break;;
+                
+            printf("Cima\n");
+            
+            
+            
+
+    }       
+        printf("Direita\n");
+
+        break;
+
+    default: printf("Opcao invalida\n");
+        break;
+    }
+
     return 0;
 }
