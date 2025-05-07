@@ -18,18 +18,14 @@ O código está estruturado para que cada tipo de peça seja movido de acordo co
 1. Clone o repositório ou baixe o código.
 
 2. Compile o código com um compilador C, como o `gcc`:
-
-   ```bash
+3. 
    gcc xadrez.c -o xadrez
-   ```
+   
+4. Execute o programa gerado:
 
-3. Execute o programa gerado:
-
-   ```bash
    ./xadrez
-   ```
 
-4. O programa exibirá um menu interativo para que você escolha qual peça deseja mover. Para selecionar a peça, basta digitar a letra correspondente:
+5. O programa exibirá um menu interativo para que você escolha qual peça deseja mover. Para selecionar a peça, basta digitar a letra correspondente:
 
    * `T` ou `t` para Torre
    * `R` ou `r` para Rainha
